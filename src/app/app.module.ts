@@ -1,3 +1,4 @@
+import { FormsModule } from '@angular/forms';
 
 
 import { BrowserModule } from '@angular/platform-browser';
@@ -20,17 +21,20 @@ import { SharedModule } from './shared/shared.module';
 
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     RegisterComponent
+    
   ],
   imports: [
     BrowserModule,
     APP_ROUTES,
     PagesModule,
-    SharedModule
+    FormsModule
+    /* SharedModule, */
   ],
   providers: [],
   bootstrap: [AppComponent]

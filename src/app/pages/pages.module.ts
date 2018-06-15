@@ -7,21 +7,32 @@ import { BrowserModule } from '@angular/platform-browser';
 import { PAGES_ROUTES } from './pages.routes';
 import { AppComponent } from '../app.component';
 import { SharedModule } from '../shared/shared.module';
+import { FormsModule } from '@angular/forms';
 
+import { ChartsModule } from 'ng2-charts';
+
+
+// temporal
+import { IncrementadorComponent } from '../components/incrementador/incrementador.component';
 
 @NgModule({
     declarations: [
-      DashboardComponent,
-      ProgressComponent,
-      Graficas1Component,
-      PagesComponent
+        DashboardComponent,
+        ProgressComponent,
+        Graficas1Component,
+        PagesComponent,
+        IncrementadorComponent
+    ],
+    exports: [
+        DashboardComponent,
+        ProgressComponent,
+        Graficas1Component
     ],
     imports: [
-      BrowserModule,
-      PAGES_ROUTES,
-      SharedModule
-    ],
-    providers: [],
-    bootstrap: [AppComponent]
-  })
-  export class PagesModule { }
+        SharedModule,
+        PAGES_ROUTES,
+        FormsModule,
+        ChartsModule
+    ]
+})
+export class PagesModule { }
