@@ -13,11 +13,12 @@ import { APP_ROUTES } from './app.routes';
 
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
-import { PagesComponent } from './pages/pages.component';
 import { RegisterComponent } from './login/register.component';
 import { PagesModule } from './pages/pages.module';
-import { SharedModule } from './shared/shared.module';
 
+//Servicios
+
+import { ServiceModule } from './Services/service.module';
 
 
 
@@ -33,7 +34,8 @@ import { SharedModule } from './shared/shared.module';
     BrowserModule,
     APP_ROUTES,
     PagesModule,
-    FormsModule
+    FormsModule,
+    ServiceModule
     /* SharedModule, */
   ],
   providers: [],
