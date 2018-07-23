@@ -16,7 +16,7 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './login/register.component';
 import { PagesModule } from './pages/pages.module';
 
-//Servicios
+// Servicios
 
 import { ServiceModule } from './Services/service.module';
 
@@ -24,21 +24,20 @@ import { ServiceModule } from './Services/service.module';
 
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    LoginComponent,
-    RegisterComponent
-    
-  ],
-  imports: [
-    BrowserModule,
-    APP_ROUTES,
-    PagesModule,
-    FormsModule,
-    ServiceModule
-    /* SharedModule, */
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+    declarations: [
+        AppComponent,
+        LoginComponent,
+        RegisterComponent
+    ],
+    imports: [
+        BrowserModule,
+        APP_ROUTES,
+        PagesModule,
+        FormsModule,
+        ServiceModule
+        /* SharedModule, */
+    ],
+    providers: [],
+    bootstrap: [AppComponent]
 })
 export class AppModule { }
