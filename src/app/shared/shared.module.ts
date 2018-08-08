@@ -7,6 +7,7 @@ import { BreadcrumbsComponent } from './breadcrumbs/breadcrumbs.component';
 import { NopagefoundComponent } from './nopagefound/nopagefound.component';
 import { RouterModule } from '../../../node_modules/@angular/router';
 import { CommonModule } from '../../../node_modules/@angular/common';
+import { PipesModule } from '../pipes/pipes.module';
 
 
 @NgModule({
@@ -26,7 +27,8 @@ import { CommonModule } from '../../../node_modules/@angular/common';
       imports: [
         BrowserModule,
         RouterModule,
-        CommonModule
+        CommonModule,
+        PipesModule
       ],
       providers: [],
       bootstrap: [AppComponent]
