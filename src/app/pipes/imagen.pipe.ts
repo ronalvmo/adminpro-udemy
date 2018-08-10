@@ -16,7 +16,9 @@ export class ImagenPipe implements PipeTransform {
     if (img.indexOf('https') >= 0) {
       return img;
     }
-   let ruta = `${url}/${tipo}/${img}`;
+    let tipos = ['usuario','hospital','medico'];
+     let ruta = `${url}/${tipo}/${img}`;
+     //console.log(ruta, 'ruta');
     /* switch (tipo) {
       case 'usuario':
         return url + '/usuario/' + img;
@@ -27,7 +29,12 @@ export class ImagenPipe implements PipeTransform {
       case 'hospital':
         break;
     } */
-    
+    if (tipos.indexOf(tipo) < 0 ){
+      //console.log(tipos.indexOf('sfdsf'), 'indexOf tipos');
+      return url + '/usuarios/xxx';
+    }
+
+    //console.log(ruta, 'retorno ruta');
     return ruta;
   }
 
